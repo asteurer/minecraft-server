@@ -27,9 +27,9 @@ spec:
     spec:
       containers:
         - name: mc-server
-          image: itzg/minecraft-server
+          image: itzg/minecraft-bedrock-server
           ports:
-            - containerPort: 25565
+            - containerPort: 19132
           env:
             - name: EULA
               value: "TRUE"
@@ -51,7 +51,7 @@ spec:
   selector:
     app: minecraft-server
   ports:
-    - protocol: TCP
-      port: 25565
-      targetPort: 25565
+    - protocol: UDP
+      port: 19132
+      targetPort: 19132
   type: LoadBalancer
