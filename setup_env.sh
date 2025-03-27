@@ -20,5 +20,5 @@ chmod +x b2
 sudo mv b2 /usr/local/bin
 
 # Run the systemd service initialization scripts
-source b2.env && bash systemd_backup/init.sh
+bash systemd_backup/init.sh
 bash systemd_update/init.sh
