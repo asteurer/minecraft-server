@@ -1,0 +1,15 @@
+name: minecraft
+services:
+  server:
+    image: itzg/minecraft-bedrock-server
+    ports:
+      - 19132:19132/udp
+    volumes:
+      - ./minecraft-data:/data
+    environment:
+      - EULA=TRUE
+      - GAMEMODE=survival
+      - DIFFICULTY=normal
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
