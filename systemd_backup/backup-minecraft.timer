@@ -1,0 +1,8 @@
+[Unit]
+Description="Run backup-minecraft.service daily at 9AM UTC (4AM Central)"
+
+[Timer]
+OnCalendar=Mon..Sun *-*-* 09:00:00
+
+[Install]
+WantedBy=multi-user.target

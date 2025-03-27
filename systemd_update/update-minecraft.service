@@ -1,0 +1,9 @@
+[Unit]
+Description="Run the /usr/bin/update-minecraft.sh file"
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/update-minecraft.sh
+
+[Install]
+WantedBy=multi-user.target

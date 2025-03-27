@@ -1,0 +1,8 @@
+[Unit]
+Description="Run update-minecraft.service at 9AM UTC (4AM Central) on Wednesdays"
+
+[Timer]
+OnCalendar=Wed *-*-* 09:00:00
+
+[Install]
+WantedBy=multi-user.target

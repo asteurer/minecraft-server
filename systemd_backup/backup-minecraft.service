@@ -1,0 +1,10 @@
+[Unit]
+Description="Run the /usr/bin/backup-minecraft.sh file"
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/sysconfig/backup-minecraft
+ExecStart=/usr/bin/backup-minecraft.sh
+
+[Install]
+WantedBy=multi-user.target
